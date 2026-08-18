@@ -1,5 +1,7 @@
 import { NavItem, Service, Review, BlogPost } from './types';
 import React from 'react';
+import EarthquakeMagnitudeGraphic from './components/EarthquakeMagnitudeGraphic';
+import EarthquakeStatsGrid from './components/AnimatedStatsGrid';
 
 export const LOGO_URL = "https://storage.googleapis.com/ai-studio-bucket-212404626118-us-west1/WEBS/wirral_spanish/espanol_con_claudia.png";
 
@@ -72,13 +74,14 @@ export const REVIEWS: Review[] = [
 export const BLOG_POSTS: BlogPost[] = [
   {
     id: "colombia-earthquake-emergency",
-    title: "Urgent Appeal: Standing with Colombia After the Devastating Earthquake",
-    excerpt: "Over 300 lives lost, 4,187 injured, 143 missing, and more than 120,328 families affected. Read how the earthquake has impacted communities across Colombia and how you can provide direct, life-saving aid via the Colombian Red Cross.",
+    title: "Urgent Appeal: Standing with Colombia After the Devastating 7.4 Magnitude Earthquake",
+    excerpt: "On Monday, August 10, 2026, a catastrophic 7.4 magnitude earthquake struck Colombia. Over 300 lives lost, 4,187 injured, 143 missing, and more than 120,328 families affected. Read the official report and discover how you can provide direct, life-saving aid via the Colombian Red Cross.",
     image: "https://storage.googleapis.com/ai-studio-bucket-212404626118-us-west1/WEBS/wirral_spanish/fotos_nuevas_2026/terremoto_colombia_04.png",
     date: "August 17, 2026",
     category: "Emergency Appeal",
     keywords: [
       "Colombia Earthquake Relief",
+      "7.4 Magnitude Earthquake Colombia",
       "Cruz Roja Colombiana",
       "Humanitarian Aid Colombia",
       "Donate Colombia Emergency",
@@ -104,31 +107,22 @@ export const BLOG_POSTS: BlogPost[] = [
       ),
 
       React.createElement('p', { className: "mb-6 text-lg leading-relaxed text-gray-800", key: "p1" },
-        "As many of you know, my mother is Colombian, and I spent my entire childhood and youth growing up in Cali, Colombia. Colombia is a land of extraordinary warmth, vibrant culture, and resilient people. Today, my heart aches as a catastrophic earthquake has struck vulnerable communities across Colombia, causing unprecedented devastation and unfathomable sorrow for hundreds of thousands of our brothers and sisters."
+        "On the morning of ",
+        React.createElement('strong', { className: "text-brand-crimson font-bold" }, "Monday, 10th August 2026 (Lunes 10 de Agosto)"),
+        ", a violent and shallow earthquake measuring ",
+        React.createElement('strong', { className: "text-brand-crimson font-black text-xl" }, "7.4 on the Richter Scale"),
+        " tore through Colombia. As many of you know, my mother is Colombian and I spent my entire youth in Cali. Today, our hearts are shattered witnessing the sheer devastation and suffering experienced by hundreds of thousands of our brothers and sisters."
       ),
 
-      React.createElement('div', { className: "grid grid-cols-2 md:grid-cols-4 gap-4 my-8", key: "stats-grid" }, [
-        React.createElement('div', { className: "bg-gray-900 text-white p-5 rounded-2xl text-center border-b-4 border-brand-crimson", key: "s1" }, [
-          React.createElement('span', { className: "text-3xl md:text-4xl font-extrabold text-brand-crimson block mb-1", key: "num1" }, "+300"),
-          React.createElement('span', { className: "text-xs uppercase tracking-wider text-gray-300 font-semibold", key: "lbl1" }, "Confirmed Fatalities")
-        ]),
-        React.createElement('div', { className: "bg-gray-900 text-white p-5 rounded-2xl text-center border-b-4 border-brand-supernova", key: "s2" }, [
-          React.createElement('span', { className: "text-3xl md:text-4xl font-extrabold text-brand-supernova block mb-1", key: "num2" }, "4,187"),
-          React.createElement('span', { className: "text-xs uppercase tracking-wider text-gray-300 font-semibold", key: "lbl2" }, "Injured Citizens")
-        ]),
-        React.createElement('div', { className: "bg-gray-900 text-white p-5 rounded-2xl text-center border-b-4 border-amber-500", key: "s3" }, [
-          React.createElement('span', { className: "text-3xl md:text-4xl font-extrabold text-amber-400 block mb-1", key: "num3" }, "143"),
-          React.createElement('span', { className: "text-xs uppercase tracking-wider text-gray-300 font-semibold", key: "lbl3" }, "Reported Missing")
-        ]),
-        React.createElement('div', { className: "bg-gray-900 text-white p-5 rounded-2xl text-center border-b-4 border-blue-500", key: "s4" }, [
-          React.createElement('span', { className: "text-3xl md:text-4xl font-extrabold text-blue-400 block mb-1", key: "num4" }, "+120,328"),
-          React.createElement('span', { className: "text-xs uppercase tracking-wider text-gray-300 font-semibold", key: "lbl4" }, "Affected Families")
-        ])
-      ]),
+      /* Embedded Animated Seismic Graphic */
+      React.createElement(EarthquakeMagnitudeGraphic, { key: "seismic-graphic" }),
+
+      /* Embedded Animated Counter Stats Grid */
+      React.createElement(EarthquakeStatsGrid, { key: "stats-grid", useFullNumbers: true }),
 
       React.createElement('h3', { className: "text-2xl md:text-3xl font-bold text-brand-navBlue mt-8 mb-4", key: "h-status" }, "The Scale of the Tragedy & Relief Efforts"),
       React.createElement('p', { className: "mb-6 text-gray-700 leading-relaxed", key: "p-status" },
-        "The earthquake struck with devastating magnitude, collapsing vital infrastructure, fracturing mountain roads, and leaving entire neighborhoods in ruins. Search and rescue teams, sniffer dog units, and humanitarian workers are laboring around the clock through debris and challenging weather conditions to find survivors trapped under collapsed buildings."
+        "The 7.4 magnitude shockwave struck with immense kinetic energy, collapsing vital infrastructure, fracturing mountain transit arteries, and bringing down historic and residential structures. Search and rescue teams, sniffer dog units, and humanitarian workers are laboring around the clock through debris and challenging weather conditions to find survivors trapped under collapsed buildings."
       ),
 
       React.createElement('div', { className: "my-8 rounded-3xl overflow-hidden shadow-xl border border-gray-200", key: "img-wrap-1" }, [

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Heart, ArrowRight, ExternalLink, AlertTriangle, Users, Activity, HelpCircle } from 'lucide-react';
+import { Heart, ArrowRight, ExternalLink, AlertTriangle } from 'lucide-react';
+import { EarthquakeStatsGrid } from './AnimatedStatsGrid';
 
 interface ColombiaEmergencyBannerProps {
   onNavigate: (page: string, sectionId?: string, postId?: string) => void;
@@ -23,40 +24,23 @@ const ColombiaEmergencyBanner: React.FC<ColombiaEmergencyBannerProps> = ({ onNav
               <div className="flex flex-wrap items-center gap-3">
                 <span className="inline-flex items-center gap-1.5 bg-brand-crimson text-white px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-widest shadow-md animate-pulse">
                   <AlertTriangle size={14} className="text-brand-supernova" />
-                  Urgent Disaster Relief
+                  Magnitude 7.4 Earthquake
                 </span>
-                <span className="text-gray-400 text-xs font-medium uppercase tracking-wider">
-                  Official Humanitarian Appeal
+                <span className="bg-white/10 text-brand-supernova px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-white/10">
+                  Monday, 10th August 2026
                 </span>
               </div>
 
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight text-white">
-                Standing with <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-supernova via-yellow-300 to-amber-400">Colombia</span> After the Devastating Earthquake
+                Standing with <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-supernova via-yellow-300 to-amber-400">Colombia</span> After the Devastating 7.4 Mw Earthquake
               </h2>
 
               <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-                As a native Colombian born to a Colombian mother, this tragedy touches my heart deeply. Hundreds of communities have suffered catastrophic damage. Our Wirral & international community is coming together to support life-saving efforts on the ground.
+                On <strong className="text-white">Monday, 10 August 2026</strong>, a destructive 7.4 magnitude earthquake struck Colombia. As a native Colombian born to a Colombian mother, this tragedy touches my heart deeply. Hundreds of communities have suffered catastrophic damage. Our Wirral & international community is coming together to support life-saving efforts on the ground.
               </p>
 
-              {/* Key Disaster Metrics */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-3.5 text-center">
-                  <span className="text-2xl sm:text-3xl font-black text-brand-crimson block">+300</span>
-                  <span className="text-[11px] uppercase tracking-wider text-gray-400 font-semibold">Fatalities</span>
-                </div>
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-3.5 text-center">
-                  <span className="text-2xl sm:text-3xl font-black text-brand-supernova block">4,187</span>
-                  <span className="text-[11px] uppercase tracking-wider text-gray-400 font-semibold">Injured</span>
-                </div>
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-3.5 text-center">
-                  <span className="text-2xl sm:text-3xl font-black text-amber-400 block">143</span>
-                  <span className="text-[11px] uppercase tracking-wider text-gray-400 font-semibold">Missing</span>
-                </div>
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-3.5 text-center">
-                  <span className="text-2xl sm:text-3xl font-black text-blue-400 block">+120k</span>
-                  <span className="text-[11px] uppercase tracking-wider text-gray-400 font-semibold">Families</span>
-                </div>
-              </div>
+              {/* Key Disaster Metrics with Animated Counter */}
+              <EarthquakeStatsGrid compact={true} useFullNumbers={false} />
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
