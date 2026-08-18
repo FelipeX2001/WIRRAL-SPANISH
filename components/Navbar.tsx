@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, Instagram, Calendar } from 'lucide-react';
 import { LOGO_URL, NAV_ITEMS, SOCIAL_LINKS, WHATSAPP_URL } from '../constants';
+import DonationBanner from './DonationBanner';
 
 interface NavbarProps {
   onNavigate: (page: string, sectionId?: string) => void;
@@ -78,86 +79,91 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
 
   return (
     <>
-      <nav 
-        className={`fixed w-full z-40 transition-all duration-300 bg-white ${
-          isScrolled ? 'shadow-lg py-2' : 'py-4 shadow-sm'
-        }`}
-      >
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="flex justify-between items-center">
-            {/* Logo Area */}
-            <a 
-              href="#home" 
-              onClick={(e) => handleLinkClick(e, { label: 'Home', href: '#home' })} 
-              className="flex-shrink-0 group"
-            >
-              <img src={LOGO_URL} alt="Español con Claudia" className="h-12 md:h-16 w-auto object-contain transition-transform group-hover:scale-105" />
-            </a>
-
-            {/* Desktop Nav */}
-            <div className="hidden lg:flex items-center space-x-8">
-              <div className="flex space-x-8">
-                {NAV_ITEMS.map((item) => (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    onClick={(e) => handleLinkClick(e, item)}
-                    className={`font-semibold transition-colors relative group text-sm uppercase tracking-wider ${
-                      isActive(item.label) 
-                        ? 'text-brand-crimson' 
-                        : 'text-brand-navBlue hover:text-brand-crimson'
-                    }`}
-                  >
-                    {item.label}
-                    <span className={`absolute -bottom-1 left-0 h-0.5 bg-brand-crimson transition-all duration-300 ${
-                       isActive(item.label) ? 'w-full' : 'w-0 group-hover:w-full'
-                    }`}></span>
-                  </a>
-                ))}
-              </div>
-              
-              {/* Social Icons Desktop */}
-              <div className="flex items-center space-x-3 ml-6 border-l border-gray-200 pl-6">
-                <a 
-                  href={SOCIAL_LINKS.instagram} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="bg-brand-navBlue/5 p-2 rounded-full hover:bg-brand-navBlue hover:text-white text-brand-navBlue transition-all duration-300"
-                  aria-label="Instagram"
-                >
-                  <Instagram size={18} />
-                </a>
-                <a 
-                  href={SOCIAL_LINKS.tiktok} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="bg-brand-navBlue/5 p-2 rounded-full hover:bg-brand-navBlue hover:text-white text-brand-navBlue transition-all duration-300"
-                  aria-label="TikTok"
-                >
-                  <TikTokIcon size={18} />
-                </a>
-                <a href="tel:+447809735716" className="bg-brand-crimson p-2 rounded-full hover:bg-red-600 text-white transition-all shadow-md hover:scale-110 hover:rotate-12">
-                  <Phone size={18} />
-                </a>
-              </div>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <div className="lg:hidden flex items-center space-x-4">
-               <a href="tel:+447809735716" className="bg-brand-crimson p-2 rounded-full text-white shadow-md hover:scale-105 transition-transform">
-                  <Phone size={20} />
-                </a>
-              <button
-                onClick={() => setIsOpen(true)}
-                className="text-brand-navBlue hover:text-brand-crimson transition-colors focus:outline-none p-1"
-                aria-label="Open Menu"
+      <header className="fixed top-0 left-0 w-full z-40">
+        <nav 
+          className={`w-full transition-all duration-300 bg-white ${
+            isScrolled ? 'shadow-md py-2' : 'py-3 md:py-4 shadow-xs'
+          }`}
+        >
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="flex justify-between items-center">
+              {/* Logo Area */}
+              <a 
+                href="#home" 
+                onClick={(e) => handleLinkClick(e, { label: 'Home', href: '#home' })} 
+                className="flex-shrink-0 group"
               >
-                <Menu size={32} />
-              </button>
+                <img src={LOGO_URL} alt="Español con Claudia" className="h-11 md:h-16 w-auto object-contain transition-transform group-hover:scale-105" />
+              </a>
+
+              {/* Desktop Nav */}
+              <div className="hidden lg:flex items-center space-x-8">
+                <div className="flex space-x-8">
+                  {NAV_ITEMS.map((item) => (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      onClick={(e) => handleLinkClick(e, item)}
+                      className={`font-semibold transition-colors relative group text-sm uppercase tracking-wider ${
+                        isActive(item.label) 
+                          ? 'text-brand-crimson' 
+                          : 'text-brand-navBlue hover:text-brand-crimson'
+                      }`}
+                    >
+                      {item.label}
+                      <span className={`absolute -bottom-1 left-0 h-0.5 bg-brand-crimson transition-all duration-300 ${
+                         isActive(item.label) ? 'w-full' : 'w-0 group-hover:w-full'
+                      }`}></span>
+                    </a>
+                  ))}
+                </div>
+                
+                {/* Social Icons Desktop */}
+                <div className="flex items-center space-x-3 ml-6 border-l border-gray-200 pl-6">
+                  <a 
+                    href={SOCIAL_LINKS.instagram} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="bg-brand-navBlue/5 p-2 rounded-full hover:bg-brand-navBlue hover:text-white text-brand-navBlue transition-all duration-300"
+                    aria-label="Instagram"
+                  >
+                    <Instagram size={18} />
+                  </a>
+                  <a 
+                    href={SOCIAL_LINKS.tiktok} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="bg-brand-navBlue/5 p-2 rounded-full hover:bg-brand-navBlue hover:text-white text-brand-navBlue transition-all duration-300"
+                    aria-label="TikTok"
+                  >
+                    <TikTokIcon size={18} />
+                  </a>
+                  <a href="tel:+447809735716" className="bg-brand-crimson p-2 rounded-full hover:bg-red-600 text-white transition-all shadow-md hover:scale-110 hover:rotate-12">
+                    <Phone size={18} />
+                  </a>
+                </div>
+              </div>
+
+              {/* Mobile Menu Button */}
+              <div className="lg:hidden flex items-center space-x-4">
+                 <a href="tel:+447809735716" className="bg-brand-crimson p-2 rounded-full text-white shadow-md hover:scale-105 transition-transform">
+                    <Phone size={20} />
+                  </a>
+                <button
+                  onClick={() => setIsOpen(true)}
+                  className="text-brand-navBlue hover:text-brand-crimson transition-colors focus:outline-none p-1"
+                  aria-label="Open Menu"
+                >
+                  <Menu size={32} />
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+
+        {/* Sliding Emergency Donation Banner */}
+        <DonationBanner />
+      </header>
 
       {/* Mobile Sidebar Overlay */}
       <div 

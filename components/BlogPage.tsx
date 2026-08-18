@@ -1,14 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Calendar, User, ArrowLeft, Tag, Clock } from 'lucide-react';
 import { BLOG_POSTS } from '../constants';
 import { BlogPost } from '../types';
 
 interface BlogPageProps {
-  onNavigate: (page: string) => void;
+  onNavigate: (page: string, sectionId?: string, postId?: string) => void;
+  initialPostId?: string;
 }
 
-const BlogPage: React.FC<BlogPageProps> = ({ onNavigate }) => {
-  const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
+const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, initialPostId }) => {
+  const [selectedPost, setSelectedPost] = useState<BlogPost | null>(() => {
+    if (initialPostId) {
+      return BLOG_POSTS.find(p => p.id === initialPostId) || null;
+    }
+    return null;
+  });
+
+  useEffect(() => {
+    if (initialPostId) {
+      const found = BLOG_POSTS.find(p => p.id === initialPostId);
+      if (found) {
+        setSelectedPost(found);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+  }, [initialPostId]);
 
   const handlePostClick = (post: BlogPost) => {
     setSelectedPost(post);
@@ -22,7 +38,7 @@ const BlogPage: React.FC<BlogPageProps> = ({ onNavigate }) => {
 
   if (selectedPost) {
     return (
-      <article className="pt-28 pb-20 bg-white min-h-screen animate-fade-in-up">
+      <article className="pt-36 pb-20 bg-white min-h-screen animate-fade-in-up">
         {/* Progress Bar / Scroll Indicator could go here */}
         
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
@@ -98,7 +114,7 @@ const BlogPage: React.FC<BlogPageProps> = ({ onNavigate }) => {
   }
 
   return (
-    <section className="pt-28 pb-20 bg-gray-50 min-h-screen">
+    <section className="pt-36 pb-20 bg-gray-50 min-h-screen">
       <div className="container mx-auto px-4 md:px-6">
         
         {/* Blog Header */}

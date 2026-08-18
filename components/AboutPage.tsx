@@ -3,7 +3,7 @@ import { Quote } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
   return (
-    <section className="pt-28 pb-20 bg-white min-h-screen">
+    <section className="pt-36 pb-20 bg-white min-h-screen">
       <div className="container mx-auto px-4 md:px-6">
         
         {/* Header Section */}

@@ -71,6 +71,208 @@ export const REVIEWS: Review[] = [
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    id: "colombia-earthquake-emergency",
+    title: "Urgent Appeal: Standing with Colombia After the Devastating Earthquake",
+    excerpt: "Over 300 lives lost, 4,187 injured, 143 missing, and more than 120,328 families affected. Read how the earthquake has impacted communities across Colombia and how you can provide direct, life-saving aid via the Colombian Red Cross.",
+    image: "https://storage.googleapis.com/ai-studio-bucket-212404626118-us-west1/WEBS/wirral_spanish/fotos_nuevas_2026/terremoto_colombia_04.png",
+    date: "August 17, 2026",
+    category: "Emergency Appeal",
+    keywords: [
+      "Colombia Earthquake Relief",
+      "Cruz Roja Colombiana",
+      "Humanitarian Aid Colombia",
+      "Donate Colombia Emergency",
+      "Wirral Community Solidarity",
+      "Colombian Red Cross"
+    ],
+    content: React.createElement(React.Fragment, null, [
+      React.createElement('div', { className: "bg-red-50 border-2 border-brand-crimson/30 p-6 md:p-8 rounded-3xl mb-8 shadow-sm", key: "urgent-banner" },
+        React.createElement('div', { className: "flex flex-col sm:flex-row sm:items-center justify-between gap-4" }, [
+          React.createElement('div', { key: "ub-text" }, [
+            React.createElement('span', { className: "bg-brand-crimson text-white text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full inline-block mb-2", key: "ub-tag" }, "CRITICAL HUMANITARIAN CRISIS"),
+            React.createElement('h3', { className: "text-2xl font-bold text-gray-900", key: "ub-title" }, "Official Emergency Appeal for Colombia"),
+            React.createElement('p', { className: "text-gray-700 text-sm mt-1", key: "ub-sub" }, "100% of direct donations channel straight to first responders and emergency relief on the ground.")
+          ]),
+          React.createElement('a', {
+            href: "https://www.cruzrojacolombiana.org/",
+            target: "_blank",
+            rel: "noopener noreferrer",
+            className: "bg-brand-crimson hover:bg-red-700 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center flex items-center justify-center gap-2 whitespace-nowrap",
+            key: "ub-btn"
+          }, "Donate Directly Now ↗")
+        ])
+      ),
+
+      React.createElement('p', { className: "mb-6 text-lg leading-relaxed text-gray-800", key: "p1" },
+        "As many of you know, my mother is Colombian, and I spent my entire childhood and youth growing up in Cali, Colombia. Colombia is a land of extraordinary warmth, vibrant culture, and resilient people. Today, my heart aches as a catastrophic earthquake has struck vulnerable communities across Colombia, causing unprecedented devastation and unfathomable sorrow for hundreds of thousands of our brothers and sisters."
+      ),
+
+      React.createElement('div', { className: "grid grid-cols-2 md:grid-cols-4 gap-4 my-8", key: "stats-grid" }, [
+        React.createElement('div', { className: "bg-gray-900 text-white p-5 rounded-2xl text-center border-b-4 border-brand-crimson", key: "s1" }, [
+          React.createElement('span', { className: "text-3xl md:text-4xl font-extrabold text-brand-crimson block mb-1", key: "num1" }, "+300"),
+          React.createElement('span', { className: "text-xs uppercase tracking-wider text-gray-300 font-semibold", key: "lbl1" }, "Confirmed Fatalities")
+        ]),
+        React.createElement('div', { className: "bg-gray-900 text-white p-5 rounded-2xl text-center border-b-4 border-brand-supernova", key: "s2" }, [
+          React.createElement('span', { className: "text-3xl md:text-4xl font-extrabold text-brand-supernova block mb-1", key: "num2" }, "4,187"),
+          React.createElement('span', { className: "text-xs uppercase tracking-wider text-gray-300 font-semibold", key: "lbl2" }, "Injured Citizens")
+        ]),
+        React.createElement('div', { className: "bg-gray-900 text-white p-5 rounded-2xl text-center border-b-4 border-amber-500", key: "s3" }, [
+          React.createElement('span', { className: "text-3xl md:text-4xl font-extrabold text-amber-400 block mb-1", key: "num3" }, "143"),
+          React.createElement('span', { className: "text-xs uppercase tracking-wider text-gray-300 font-semibold", key: "lbl3" }, "Reported Missing")
+        ]),
+        React.createElement('div', { className: "bg-gray-900 text-white p-5 rounded-2xl text-center border-b-4 border-blue-500", key: "s4" }, [
+          React.createElement('span', { className: "text-3xl md:text-4xl font-extrabold text-blue-400 block mb-1", key: "num4" }, "+120,328"),
+          React.createElement('span', { className: "text-xs uppercase tracking-wider text-gray-300 font-semibold", key: "lbl4" }, "Affected Families")
+        ])
+      ]),
+
+      React.createElement('h3', { className: "text-2xl md:text-3xl font-bold text-brand-navBlue mt-8 mb-4", key: "h-status" }, "The Scale of the Tragedy & Relief Efforts"),
+      React.createElement('p', { className: "mb-6 text-gray-700 leading-relaxed", key: "p-status" },
+        "The earthquake struck with devastating magnitude, collapsing vital infrastructure, fracturing mountain roads, and leaving entire neighborhoods in ruins. Search and rescue teams, sniffer dog units, and humanitarian workers are laboring around the clock through debris and challenging weather conditions to find survivors trapped under collapsed buildings."
+      ),
+
+      React.createElement('div', { className: "my-8 rounded-3xl overflow-hidden shadow-xl border border-gray-200", key: "img-wrap-1" }, [
+        React.createElement('img', {
+          src: "https://storage.googleapis.com/ai-studio-bucket-212404626118-us-west1/WEBS/wirral_spanish/fotos_nuevas_2026/terremoto_colombia_01.jpg",
+          alt: "Earthquake damage and ongoing rescue operations in Colombia",
+          className: "w-full h-80 md:h-96 object-cover",
+          key: "img1"
+        }),
+        React.createElement('p', { className: "text-xs text-gray-500 italic p-3 bg-gray-50 text-center", key: "cap1" },
+          "Emergency rescue personnel and local volunteers working tirelessly amidst collapsed structures."
+        )
+      ]),
+
+      React.createElement('h3', { className: "text-2xl font-bold text-brand-darkBlue mt-8 mb-3", key: "h-needs" }, "Urgent Needs on the Ground"),
+      React.createElement('p', { className: "mb-4 text-gray-700", key: "p-needs1" },
+        "With water pipelines shattered and electrical grids severed, displaced families are taking shelter in makeshift community centers and open fields. The most immediate life-saving priorities right now include:"
+      ),
+      React.createElement('ul', { className: "list-disc pl-6 space-y-2.5 mb-6 text-gray-700 font-medium", key: "needs-list" }, [
+        React.createElement('li', { key: "nl1" }, "Emergency medical kits, surgical supplies, and antibiotics for overwhelmed field clinics."),
+        React.createElement('li', { key: "nl2" }, "Potable drinking water purification units and non-perishable food parcels."),
+        React.createElement('li', { key: "nl3" }, "Emergency all-weather tents, thermal blankets, and temporary bedding for children and the elderly."),
+        React.createElement('li', { key: "nl4" }, "Trauma response counseling and maternal care kits for pregnant women and newborns.")
+      ]),
+
+      React.createElement('div', { className: "grid grid-cols-1 md:grid-cols-2 gap-6 my-8", key: "img-grid-mid" }, [
+        React.createElement('div', { className: "rounded-2xl overflow-hidden shadow-lg border border-gray-200", key: "wrap-img2" }, [
+          React.createElement('img', {
+            src: "https://storage.googleapis.com/ai-studio-bucket-212404626118-us-west1/WEBS/wirral_spanish/fotos_nuevas_2026/terremoto_colombia_02.jpg",
+            alt: "First responders assessing damage in affected communities",
+            className: "w-full h-64 object-cover",
+            key: "img2"
+          }),
+          React.createElement('p', { className: "text-xs text-gray-500 italic p-2.5 bg-gray-50 text-center", key: "cap2" },
+            "First responders coordinating humanitarian aid corridors in affected areas."
+          )
+        ]),
+        React.createElement('div', { className: "rounded-2xl overflow-hidden shadow-lg border border-gray-200", key: "wrap-img3" }, [
+          React.createElement('img', {
+            src: "https://storage.googleapis.com/ai-studio-bucket-212404626118-us-west1/WEBS/wirral_spanish/fotos_nuevas_2026/terremoto_colombia_03.webp",
+            alt: "Humanitarian assistance being distributed to affected families in Colombia",
+            className: "w-full h-64 object-cover",
+            key: "img3"
+          }),
+          React.createElement('p', { className: "text-xs text-gray-500 italic p-2.5 bg-gray-50 text-center", key: "cap3" },
+            "Cruz Roja Colombiana deploying food parcels, hygiene kits, and emergency shelter."
+          )
+        ])
+      ]),
+
+      React.createElement('h3', { className: "text-2xl md:text-3xl font-bold text-brand-crimson mt-8 mb-3", key: "h-how" }, "How You Can Help from the UK & Wirral"),
+      React.createElement('p', { className: "mb-4 text-gray-700 leading-relaxed", key: "p-how1" },
+        "The fastest and most transparent way to send help directly to the victims is through the official ",
+        React.createElement('strong', { className: "text-gray-900" }, "Cruz Roja Colombiana (Colombian Red Cross)"),
+        ". Every British Pound goes a remarkably long way in Colombia, directly funding emergency rations, clean water, and medical care."
+      ),
+
+      React.createElement('div', { className: "bg-brand-navBlue text-white p-8 rounded-3xl my-8 text-center shadow-xl border-2 border-brand-supernova/30", key: "cta-box" }, [
+        React.createElement('h4', { className: "text-2xl md:text-3xl font-black mb-3", key: "cta-t" }, "Donate to Cruz Roja Colombiana"),
+        React.createElement('p', { className: "text-blue-100 max-w-xl mx-auto mb-6 text-sm md:text-base", key: "cta-d" },
+          "Please consider making a donation today. Your support brings immediate solace, food, and hope to families who have lost everything."
+        ),
+        React.createElement('a', {
+          href: "https://www.cruzrojacolombiana.org/",
+          target: "_blank",
+          rel: "noopener noreferrer",
+          className: "inline-flex items-center gap-2 bg-brand-crimson hover:bg-red-600 active:scale-95 text-white font-bold py-4 px-10 rounded-2xl text-lg shadow-2xl transition-all duration-300",
+          key: "cta-link"
+        }, [
+          "Donate via Colombian Red Cross 🇨🇴",
+          React.createElement('span', { className: "text-xl", key: "arr" }, "↗")
+        ]),
+        React.createElement('p', { className: "text-xs text-blue-200 mt-4", key: "cta-note" }, "Official website: https://www.cruzrojacolombiana.org/")
+      ]),
+
+      React.createElement('p', { className: "mb-4 text-gray-700 italic leading-relaxed", key: "p-closing" },
+        "To our wonderful students, friends, and community in Wirral, Merseyside, and beyond: thank you from the bottom of my heart for your empathy, your messages of solidarity, and your ongoing generosity. Colombia will rise again with the support of friends around the world. ¡Fuerza Colombia!"
+      ),
+      React.createElement('p', { className: "font-bold text-brand-darkBlue text-base", key: "p-sig" }, "— Claudia, Español con Claudia")
+    ])
+  },
+  {
+    id: "tapas-and-wine-west-kirby",
+    title: "Tapas, Wine & Fluent Spanish: An Unforgettable Night in West Kirby",
+    excerpt: "On August 7th, 2026, our students gathered in West Kirby for an evening of delicious tapas, fine wine, and lively Spanish conversation. Discover why interactive, social experiences make learning Spanish in the Wirral so natural and fun.",
+    image: "https://storage.googleapis.com/ai-studio-bucket-212404626118-us-west1/WEBS/wirral_spanish/fotos_nuevas_2026/Tapas%20and%20wine_7_agosto.jpeg",
+    date: "August 7, 2026",
+    category: "Community & Events",
+    keywords: [
+      "Dynamic Spanish classes Wirral",
+      "Interactive Spanish lessons West Kirby",
+      "Spanish classes West Kirby UK",
+      "Spanish lessons Wirral",
+      "Adult Spanish classes Wirral",
+      "Conversational Spanish UK"
+    ],
+    content: React.createElement(React.Fragment, null, [
+      React.createElement('p', { className: "mb-4 text-lg font-medium text-gray-800", key: "p0" }, 
+        "There is something truly magical when language leaves the textbook and comes alive around a table filled with authentic tapas, good wine, and genuine laughter. On Friday, 7th August 2026, our wonderful community of learners came together in ",
+        React.createElement('strong', { className: "text-brand-navBlue" }, "West Kirby, Wirral"),
+        " for one of our favorite traditions: an evening of tapas, drinks, and immersive Spanish conversation. ¡Salud! 🥂"
+      ),
+      React.createElement('h3', { className: "text-2xl font-bold text-brand-darkBlue mt-8 mb-3", key: "h1" }, "Why Dynamic & Interactive Spanish Classes in Wirral Work"),
+      React.createElement('p', { className: "mb-4", key: "p1" }, 
+        "If you are searching for ",
+        React.createElement('strong', null, "dynamic Spanish classes in Wirral"),
+        " or looking for ",
+        React.createElement('strong', null, "interactive Spanish lessons in West Kirby UK"),
+        ", you already know that memorizing grammar charts in isolation only gets you so far. Real fluency happens when you have the confidence to express your thoughts, share stories, joke with peers, and order food in a relaxed, friendly environment."
+      ),
+      React.createElement('p', { className: "mb-4", key: "p2" }, 
+        "Our mixed-level table brought together students from beginners who recently learned greetings and food vocabulary, right through to intermediate and advanced speakers. Everyone supported each other, laughed through pronunciation challenges, and toasted to each milestone achieved."
+      ),
+      React.createElement('div', { className: "bg-amber-50 p-6 rounded-2xl border-l-4 border-brand-supernova my-8 shadow-xs", key: "quote" }, 
+        React.createElement('p', { className: "italic text-gray-800 font-semibold text-base md:text-lg mb-2" }, 
+          "\"Sharing food and wine while practicing Spanish is the best part of Claudia's classes. You forget you're even 'studying'—you're just living the language with great friends.\""
+        ),
+        React.createElement('span', { className: "text-brand-crimson text-sm font-bold block" }, "— Student feedback from our West Kirby Social Night")
+      ),
+      React.createElement('h3', { className: "text-2xl font-bold text-brand-darkBlue mt-6 mb-3", key: "h2" }, "Beyond the Classroom: Authentic Spanish in West Kirby, UK"),
+      React.createElement('p', { className: "mb-4", key: "p3" }, 
+        "Learning with a native tutor from Colombia means our ",
+        React.createElement('strong', null, "Spanish classes in West Kirby and the Wirral"),
+        " are infused with authentic Latin American warmth, real cultural nuances, and lively social events. From asking for the bill in Spanish (\"¿Nos trae la cuenta, por favor?\") to discussing summer travels and everyday life, our students put their classroom knowledge straight into practice."
+      ),
+      React.createElement('p', { className: "mb-4", key: "p4" }, 
+        "Whether you live in West Kirby, Hoylake, Heswall, Birkenhead, or anywhere across Merseyside and Cheshire, our ",
+        React.createElement('strong', null, "adult Spanish classes in Wirral"),
+        " combine structured grammar with dynamic conversation games, interactive exercises, and vibrant cultural meetups."
+      ),
+      React.createElement('div', { className: "bg-blue-50 p-6 rounded-2xl my-6 border border-blue-100", key: "highlights" }, 
+        React.createElement('h4', { className: "font-bold text-brand-navBlue mb-3 text-lg" }, "What made this evening special:"),
+        React.createElement('ul', { className: "list-disc pl-6 space-y-2 text-gray-700" }, [
+          React.createElement('li', { key: "li1" }, "A vibrant mixed group of learners encouraging and inspiring one another."),
+          React.createElement('li', { key: "li2" }, "Authentic tapas pairing with Spanish wine and traditional toasts (\"¡Salud, dinero y amor!\")."),
+          React.createElement('li', { key: "li3" }, "Natural conversational immersion in a warm, welcoming community right here in West Kirby.")
+        ])
+      ),
+      React.createElement('p', { className: "mb-4 font-medium text-gray-800", key: "p5" }, 
+        "Ready to join our next dinner and start speaking Spanish with confidence? Check out our group or private lessons and become part of the friendly Wirral Spanish family!"
+      )
+    ])
+  },
+  {
     id: "travel-spanish",
     title: "Unlock the World: Why Spanish is Your Best Travel Companion",
     excerpt: "Traveling to Spain or Latin America? Discover how learning the local language can transform your holiday from a simple sightseeing trip into an unforgettable cultural immersion.",

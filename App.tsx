@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import ColombiaEmergencyBanner from './components/ColombiaEmergencyBanner';
 import Services from './components/Services';
 import Gallery from './components/Gallery';
 import Footer from './components/Footer';
@@ -13,9 +14,16 @@ import BlogPage from './components/BlogPage';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<'home' | 'about' | 'contact' | 'individual' | 'group' | 'blog'>('home');
+  const [selectedBlogId, setSelectedBlogId] = useState<string | undefined>(undefined);
 
   // Handle navigation requests
-  const handleNavigate = (page: string, sectionId?: string) => {
+  const handleNavigate = (page: string, sectionId?: string, postId?: string) => {
+    if (postId) {
+      setSelectedBlogId(postId);
+    } else if (page !== 'blog') {
+      setSelectedBlogId(undefined);
+    }
+
     // Update state for page navigation
     if (['home', 'about', 'contact', 'individual', 'group', 'blog'].includes(page)) {
       setCurrentPage(page as any);
@@ -45,6 +53,7 @@ const App: React.FC = () => {
         {currentPage === 'home' ? (
           <>
             <Hero onNavigate={handleNavigate} />
+            <ColombiaEmergencyBanner onNavigate={handleNavigate} />
             <Services onNavigate={handleNavigate} />
             <Gallery />
           </>
@@ -57,7 +66,7 @@ const App: React.FC = () => {
         ) : currentPage === 'group' ? (
           <GroupLessonsPage onNavigate={handleNavigate} />
         ) : (
-          <BlogPage onNavigate={handleNavigate} />
+          <BlogPage onNavigate={handleNavigate} initialPostId={selectedBlogId} />
         )}
       </main>
       
