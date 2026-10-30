@@ -61,7 +61,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
           </div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight drop-shadow-lg">
-            Looking for Spanish lessons in the <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-supernova to-brand-turbo">Wirral</span> or anywhere in the <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-supernova to-brand-turbo">World</span>?
+            Looking for Spanish lessons <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-supernova to-brand-turbo">anywhere in the World?</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-100 font-light max-w-lg leading-relaxed">
@@ -127,7 +127,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
               <div className="flex justify-between items-end">
                 <div>
                    <h3 className="text-white text-2xl font-bold">25 Years Experience</h3>
-                   <p className="text-blue-100">Top Rated Spanish Classes Wirral & Online</p>
+                   <p className="text-blue-100">Top Rated Spanish Classes Online & Worldwide</p>
                 </div>
                 <div className="flex space-x-1">
                     {[1,2,3,4,5].map(i => <Star key={i} size={20} className="text-brand-supernova" fill="#fcc803" />)}

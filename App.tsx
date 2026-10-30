@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import ColombiaEmergencyBanner from './components/ColombiaEmergencyBanner';
 import Services from './components/Services';
 import Gallery from './components/Gallery';
 import Footer from './components/Footer';
@@ -53,7 +52,6 @@ const App: React.FC = () => {
         {currentPage === 'home' ? (
           <>
             <Hero onNavigate={handleNavigate} />
-            <ColombiaEmergencyBanner onNavigate={handleNavigate} />
             <Services onNavigate={handleNavigate} />
             <Gallery />
           </>

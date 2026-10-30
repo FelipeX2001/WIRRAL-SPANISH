@@ -23,8 +23,10 @@ const Contact: React.FC = () => {
                                 <Phone size={24} />
                             </div>
                             <div>
-                                <p className="text-xs text-blue-200 uppercase tracking-wide">Phone / WhatsApp</p>
-                                <p className="font-semibold text-lg">+44 7700 900000</p>
+                                <p className="text-xs text-blue-200 uppercase tracking-wide">WhatsApp / Phone</p>
+                                <a href="https://wa.me/447809735716?text=I%20want%20to%20speak%20Spanish%20with%20Claudia!" target="_blank" rel="noopener noreferrer" className="font-semibold text-lg hover:text-brand-supernova transition-colors">
+                                    +44 7809 735716
+                                </a>
                             </div>
                         </div>
                         <div className="flex items-center space-x-4">
@@ -33,7 +35,9 @@ const Contact: React.FC = () => {
                             </div>
                             <div>
                                 <p className="text-xs text-blue-200 uppercase tracking-wide">Email</p>
-                                <p className="font-semibold text-lg">claudia@wirralspanish.com</p>
+                                <a href="mailto:claudia@wirralspanish.com" className="font-semibold text-lg hover:text-brand-supernova transition-colors">
+                                    claudia@wirralspanish.com
+                                </a>
                             </div>
                         </div>
                         <div className="flex items-center space-x-4">
@@ -42,7 +46,7 @@ const Contact: React.FC = () => {
                             </div>
                             <div>
                                 <p className="text-xs text-blue-200 uppercase tracking-wide">Location</p>
-                                <p className="font-semibold text-lg">Wirral, UK & Online</p>
+                                <p className="font-semibold text-lg">Anywhere in the world. Online lessons via Zoom</p>
                             </div>
                         </div>
                     </div>

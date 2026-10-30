@@ -1,5 +1,6 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Send } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, MessageCircle } from 'lucide-react';
+import { WHATSAPP_URL } from '../constants';
 
 const ContactPage: React.FC = () => {
   return (
@@ -26,7 +27,7 @@ const ContactPage: React.FC = () => {
                         </div>
                         <div>
                             <p className="text-blue-200 text-sm font-semibold uppercase tracking-wider mb-1">Location</p>
-                            <p className="text-xl font-medium">Wirral, West Kirby, UK</p>
+                            <p className="text-xl font-medium">Anywhere in the world. Online lessons via Zoom</p>
                         </div>
                     </div>
 
@@ -35,9 +36,15 @@ const ContactPage: React.FC = () => {
                             <Phone size={24} className="text-brand-supernova" />
                         </div>
                         <div>
-                            <p className="text-blue-200 text-sm font-semibold uppercase tracking-wider mb-1">Phone</p>
-                            <a href="tel:+447809735716" className="text-xl font-medium hover:text-brand-supernova transition-colors">
-                                +44 7809 735716
+                            <p className="text-blue-200 text-sm font-semibold uppercase tracking-wider mb-1">WhatsApp / Phone</p>
+                            <a 
+                                href={WHATSAPP_URL} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="text-xl font-medium hover:text-brand-supernova transition-colors inline-flex items-center gap-2"
+                            >
+                                <span>+44 7809 735716</span>
+                                <span className="text-xs bg-emerald-500/80 text-white px-2 py-0.5 rounded-full font-bold">WhatsApp</span>
                             </a>
                         </div>
                     </div>
